@@ -1,2 +1,3 @@
-# JavaScript-Experiments
-Tests, exmaples, another`s code and more
+# Хранилище [JS] <br>
+
+_`Тесты`, `примеры кода`, `адаптация стороннего кода`, `и многое другое..`_
