@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 </head>
 <body>
-<div id=''></div>    
-</body>
-    
+  
 <script>
-var mass = ["ток", "торс", "кот", "рост", "фывап", "Кто"];
+var mass = ["ток", "торс", "кот", "рост", "фывап", "Кто", "реанимация", "самоебольшоесловодляпроверки"];
 var output = [];
     
 function groupMass(array) {
@@ -30,11 +28,10 @@ function groupMass(array) {
         }
     }
     
-    //console.log("Макс: " + max + " " + "Мин: " + min);
-    max = max + (max-min);
+    var k = 1;
     
     //Разбивка по группам
-    for (var i = 0; i <= (max-min); i++) {
+    for (var i = 0; i < k; i++) {
             var temp = [];
             for (var j = 0; j < length; j++) {
 
@@ -44,9 +41,10 @@ function groupMass(array) {
             }
             if (min <= max) {
                 min = min +1;
-                output.push(temp);
-            } else {
-                output.push(temp);
+                k++;
+                if (temp.length !=0) {
+                    output.push(temp);
+                }
             }
     }
     console.log(output);
@@ -56,4 +54,5 @@ console.log(mass);
 groupMass(mass);
 
 </script>
+</body>
 </html>

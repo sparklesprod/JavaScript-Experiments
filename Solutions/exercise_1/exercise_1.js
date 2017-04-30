@@ -1,8 +1,9 @@
 /*
     Один из вариантов решения. Выводит результат исходных данных в правильном виде.
-    При тестах возникает проблема в виде пустых элементов массива. Позже будет доработано и исправлено
+    UPD: Проверено несколькими тестами.
 */
-var mass = ["ток", "торс", "кот", "рост", "фывап", "Кто"];
+
+var mass = ["ток", "торс", "кот", "рост", "фывап", "Кто", "реанимация", "самоебольшоесловодляпроверки"];
 var output = [];
     
 function groupMass(array) {
@@ -24,11 +25,10 @@ function groupMass(array) {
         }
     }
     
-    //console.log("Макс: " + max + " " + "Мин: " + min);
-    max = max + (max-min);
+    var k = 1;
     
     //Разбивка по группам
-    for (var i = 0; i <= (max-min); i++) {
+    for (var i = 0; i < k; i++) {
             var temp = [];
             for (var j = 0; j < length; j++) {
 
@@ -38,9 +38,10 @@ function groupMass(array) {
             }
             if (min <= max) {
                 min = min +1;
-                output.push(temp);
-            } else {
-                output.push(temp);
+                k++;
+                if (temp.length !=0) {
+                    output.push(temp);
+                }
             }
     }
     console.log(output);
